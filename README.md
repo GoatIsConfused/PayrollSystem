@@ -8,8 +8,8 @@ The program itself is intuitive to use just follow the menu prompts. If you deci
 In the event that the program cannot read the settings file because of given permissions or lack of existance the program can still function. Backup values for the rates are hard-coded in and you can still edit these values and create a new file in the settings option.
 
 Format for save files:
-name MON TUE WED THU FRI SAT SUN pay
-name MON TUE WED THU FRI SAT SUN pay
+name MON TUE WED THU FRI SAT SUN pay \n 
+name MON TUE WED THU FRI SAT SUN pay \n 
 ...
 name MON TUE WED THU FRI SAT SUN pay
 
