@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <map>
 
 double standardRate = 31.12;
 double supervisorRate = 34.27;
@@ -23,15 +22,7 @@ void newPayroll() {
 	int amountOfEmployees;
 	int employeeRate;
 	double hoursWorked;
-	std::map<int, std::string> weekDays = { // Used to fetch what day of the week it is for each cycle in a for loop
-		{0, "MONDAY"},
-		{1, "TUESDAY"},
-		{2, "WEDNESDAY"},
-		{3, "THURSDAY"},
-		{4, "FRIDAY"},
-		{5, "SATURDAY"},
-		{6, "SUNDAY"},
-	};
+	std::string weekDays[] = {"MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"};
 
 	std::cout << "How many people are included in this weeks payroll? ";
 	std::cin >> amountOfEmployees;
@@ -135,7 +126,7 @@ void newPayroll() {
 void searchPayroll() {
 	try {
 		std::string fileName;
-		std::cout << "Enter the payweek followed by .txt to open the correct file (format DD_MM_YYYY)." << std::endl;
+		std::cout << "Enter the payweek followed by .txt to open the correct file (format: DD_MM_YYYY.txt)." << std::endl;
 		std::cin >> fileName;
 
 		std::ifstream payrollFile("storage/" + fileName);
@@ -235,7 +226,7 @@ int main()
 		std::cout << "An error occured while loading the settings." << std::endl;
 	}
 
-  // Menu
+
 	int userInput;
 	while (true) {
 		std::cout << "Payroll Creator" << std::endl;
